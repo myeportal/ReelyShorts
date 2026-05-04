@@ -1,0 +1,24 @@
+{
+  "name": "REELY SHORTS",
+  "short_name": "REELY",
+  "description": "Short-drama streaming with bite-size episodes, unlocks, and mobile-first playback.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07070b",
+  "theme_color": "#07070b",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/reely-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/reely-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
