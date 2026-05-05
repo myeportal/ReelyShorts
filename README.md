@@ -25,12 +25,12 @@ The original upload did not contain source code. It contained a project brief ex
 
 ## Known product requirements
 
-- Rebrand DramaBox to REELY SHORTS
-- Add splash/landing experience with reserved hero media space
-- Add episode locking + coin economy
-- Add rewarded ad flow for guest/unsubscribed users
-- Support deploy to Git + Vercel
-- Keep architecture adaptable for Cloudflare R2 later if needed
+- Rebrand White Label Available for early movers.
+- Add splash/landing experience with reserved hero media space created
+- Add episode locking + coin economy created
+- Add rewarded ad flow for guest/unsubscribed users created
+- Support deploy to Git + Vercel integrated
+- Keep architecture adaptable for Cloudflare R2 later if needed-OPTIONAL for WL
 
 ## Inputs still needed from Founding Father
 
