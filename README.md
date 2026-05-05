@@ -22,6 +22,7 @@ New updated version for testing with source code, and new /jv folder with splash
 - `ads/` — rewarded ad abstraction and provider notes
 - `assets/` — placeholder branding and media assets
 - `docs/` — recovered source brief and implementation notes
+- `jv/` - Planned White Label Offering
 
 ## Known product requirements
 
