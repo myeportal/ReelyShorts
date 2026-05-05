@@ -1,10 +1,10 @@
 # REELY SHORTS
 
-Production workspace for the REELY SHORTS short-drama streaming app.
+Production workspace for the REELY SHORTS short-drama streaming app. Git?Deployed to Vercel
 
 ## Current build target
 
-Version 1 will be built as:
+Version was built as:
 - React + Vite frontend
 - Supabase for auth, database, coins, and progress tracking
 - Mock rewarded-ad engine with server-side coin issuance path
@@ -53,3 +53,5 @@ The frontend now has placeholders/scaffolding for:
 ## Current status
 
 Scaffolding started from recovered specification. Next step is building the frontend app shell and data model.
+
+/JV Splashpage beta1 in place. Top Shelf ready for changes
