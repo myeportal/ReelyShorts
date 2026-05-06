@@ -341,7 +341,7 @@ function App() {
     <div className="app-shell">
       <header className="topbar">
         <div className="brand-lockup">
-          <img src="/reely-logo.png" alt="Reely Shorts logo" className="brand-logo" />
+          <img src="/reely-logo-dark.jpg" alt="Reely Shorts logo" className="brand-logo brand-logo--wordmark" />
           <div>
             <p className="eyebrow">Short drama streaming</p>
             <h1>REELY SHORTS</h1>
