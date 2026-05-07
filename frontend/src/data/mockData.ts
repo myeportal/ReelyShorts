@@ -11,11 +11,7 @@ type ImportedShow = {
   featured?: boolean
 }
 
-const posters = {
-  hero: '/placeholders/show-01.jpg',
-  romance: '/placeholders/show-02.jpg',
-  dark: '/placeholders/show-03.jpg',
-} as const
+const thumbnail = (videoId: string) => `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
 
 const importedShows: ImportedShow[] = [
   {
@@ -23,7 +19,7 @@ const importedShows: ImportedShow[] = [
     title: "Move Aside! I'm the Final Boss",
     genre: 'CEO / Secret Identity / Romance',
     tagline: "Kingsley returns from the battlefield a hidden king and richest man on earth—only to face a brutal breakup that triggers a satisfying revenge arc.",
-    poster: posters.hero,
+    poster: thumbnail('0SKOObeuGuA'),
     rating: 5.0,
     videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRuslDXLL3Tb-QTVkg8GCmzAr',
     featured: true,
@@ -33,7 +29,7 @@ const importedShows: ImportedShow[] = [
     title: 'The Double Life of My Billionaire Husband',
     genre: 'Billionaire Romance / Secret Identity',
     tagline: 'A woman unknowingly married to a secret billionaire gets pulled into loyalty tests, hidden wealth, and dramatic reveals.',
-    poster: posters.romance,
+    poster: thumbnail('6sFwVGMFA6I'),
     rating: 4.9,
     videoUrl: 'https://www.youtube.com/playlist?list=PL_a_uLZhYxLCMuu66Omi2J9U1lKE2hFmU',
   },
@@ -42,7 +38,7 @@ const importedShows: ImportedShow[] = [
     title: "Don't Miss Me When I'm Gone",
     genre: 'Heartbreak / Revenge / Second Chances',
     tagline: 'Only after she leaves does her partner grasp what he lost in this emotional second-chance revenge drama.',
-    poster: posters.dark,
+    poster: thumbnail('EiYYHh_KjMQ'),
     rating: 4.8,
     videoUrl: 'https://www.youtube.com/watch?v=EiYYHh_KjMQ',
   },
@@ -51,7 +47,7 @@ const importedShows: ImportedShow[] = [
     title: "The Cursed Alpha's Mate",
     genre: 'Paranormal / Werewolf Romance / Fantasy',
     tagline: 'Heartbreak drives Shay toward Alpha Mal Haywood, a cursed werewolf who may need her as his mate to survive.',
-    poster: posters.dark,
+    poster: thumbnail('7y1K7e5ejsk'),
     rating: 4.8,
     videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRus4HFQ6Xm28YhsK2Z3r1h9P',
   },
@@ -60,7 +56,7 @@ const importedShows: ImportedShow[] = [
     title: 'Bound by Vendetta: Sleeping with the Enemy',
     genre: 'Mafia Boss / Enemies-to-Lovers',
     tagline: 'Organized crime, deadly rivals, and undeniable chemistry collide in a high-tension enemies-to-lovers setup.',
-    poster: posters.dark,
+    poster: thumbnail('ZZbWUm7u5J0'),
     rating: 4.7,
     videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRuuErBjCfVPk_1-5AA2eW3uc',
   },
@@ -69,7 +65,7 @@ const importedShows: ImportedShow[] = [
     title: 'How to Tame a Silver Fox',
     genre: 'Age-Gap / Forbidden Romance / Young Adult',
     tagline: 'A college seduction plan spirals into a breakout forbidden romance with her father’s business partner.',
-    poster: posters.romance,
+    poster: thumbnail('cS3TKI7f4nw'),
     rating: 4.7,
     videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRusqKcB2gU7v1l30o-R3U-tz',
   },
@@ -78,7 +74,7 @@ const importedShows: ImportedShow[] = [
     title: 'Undercover Prison King',
     genre: 'Action / Thriller / Undercover',
     tagline: 'An ex-soldier goes undercover inside a corrupt prison he inherits to expose the criminal leadership from within.',
-    poster: posters.hero,
+    poster: thumbnail('3yWPJFFD0-I'),
     rating: 4.7,
     videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRuv0-8uS1VuFjNhRJ4k3w2pT',
   },
@@ -87,7 +83,7 @@ const importedShows: ImportedShow[] = [
     title: 'Love at Dangerous Speeds',
     genre: 'Street Racing / Romance / Dark Secret',
     tagline: 'A runaway bride finds passion with a street racer whose darkest confession ties back to her father’s death.',
-    poster: posters.hero,
+    poster: thumbnail('oRh7o397Jxw'),
     rating: 4.6,
     videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRuvqKRhILQM4DHLjxeHIw84B',
   },
@@ -96,7 +92,7 @@ const importedShows: ImportedShow[] = [
     title: "Mommy Don't Cry, Daddy Is Sorry",
     genre: 'Family Drama / Revenge / Mistaken Identity',
     tagline: 'A mother believed dead returns with a ruthless alter ego to reclaim her daughter and expose the people who betrayed her.',
-    poster: posters.dark,
+    poster: thumbnail('boVsVTmnek8'),
     rating: 4.8,
     videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRusJEJ4426R76zXPoWRUuJS6',
   },
@@ -105,7 +101,7 @@ const importedShows: ImportedShow[] = [
     title: "My Stepbrother's Dirty Secret",
     genre: 'Forbidden Romance / Teen Drama / Stepsibling',
     tagline: 'A new school, a millionaire stepfamily, and forbidden chemistry make this one of the year’s most bingeable dramas.',
-    poster: posters.romance,
+    poster: thumbnail('2LBbeOnMjhU'),
     rating: 4.6,
     videoUrl: 'https://www.youtube.com/playlist?list=PLd1AX5yB8l3TTOVD1AOonZM-FZPJGZ3fj',
   },
