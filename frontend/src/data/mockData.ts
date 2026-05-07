@@ -35,7 +35,7 @@ const importedShows: ImportedShow[] = [
     tagline: 'A woman unknowingly married to a secret billionaire gets pulled into loyalty tests, hidden wealth, and dramatic reveals.',
     poster: posters.romance,
     rating: 4.9,
-    videoUrl: 'https://www.youtube.com/@ReelShort',
+    videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRuslDXLL3Tb-QTVkg8GCmzAr',
   },
   {
     id: 'dont-miss-me-when-im-gone',
@@ -62,7 +62,7 @@ const importedShows: ImportedShow[] = [
     tagline: 'Organized crime, deadly rivals, and undeniable chemistry collide in a high-tension enemies-to-lovers setup.',
     poster: posters.dark,
     rating: 4.7,
-    videoUrl: 'https://www.youtube.com/@ReelShort',
+    videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRusAbYd5SDi-yNxkDAdoScvO',
   },
   {
     id: 'how-to-tame-a-silver-fox',

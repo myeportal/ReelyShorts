@@ -27,12 +27,36 @@ import type { AdminVideo, ModerationStatus, Show, VideoSource, ViewerMode } from
 function youtubeEmbedUrl(url: string) {
   try {
     const parsed = new URL(url)
-    const videoId = parsed.searchParams.get('v')
+    const host = parsed.hostname.replace(/^www\./, '')
     const start = parsed.searchParams.get('t')?.replace('s', '')
-    if (!videoId) return url
-    return `https://www.youtube.com/embed/${videoId}${start ? `?start=${Number.parseInt(start, 10) || 0}` : ''}`
+    const startParam = start ? `start=${Number.parseInt(start, 10) || 0}` : ''
+
+    if (host === 'youtu.be') {
+      const videoId = parsed.pathname.replace(/^\//, '')
+      return videoId ? `https://www.youtube.com/embed/${videoId}${startParam ? `?${startParam}` : ''}` : ''
+    }
+
+    const playlistId = parsed.searchParams.get('list')
+    if (playlistId && parsed.pathname.includes('/playlist')) {
+      return `https://www.youtube.com/embed/videoseries?list=${playlistId}`
+    }
+
+    const videoId = parsed.searchParams.get('v')
+    if (videoId) {
+      const params = new URLSearchParams()
+      if (playlistId) params.set('list', playlistId)
+      if (start) params.set('start', String(Number.parseInt(start, 10) || 0))
+      const query = params.toString()
+      return `https://www.youtube.com/embed/${videoId}${query ? `?${query}` : ''}`
+    }
+
+    if (/^\/(channel|c|@)/.test(parsed.pathname)) {
+      return ''
+    }
+
+    return ''
   } catch {
-    return url
+    return ''
   }
 }
 
@@ -58,6 +82,9 @@ function renderPlaybackMedia(source: VideoSource | null | undefined, value: stri
   }
 
   const embedUrl = source === 'vimeo' ? vimeoEmbedUrl(value) : youtubeEmbedUrl(value)
+  if (!embedUrl) {
+    return <div className={className}><div className="feedback-line">This source is not directly embeddable yet. Link a YouTube video or playlist URL for playback.</div></div>
+  }
   return <div className={className}><iframe title={title} src={embedUrl} loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /></div>
 }
 
