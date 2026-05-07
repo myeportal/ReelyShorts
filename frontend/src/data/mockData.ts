@@ -1,75 +1,142 @@
 import type { AdminVideo, Show } from '../types'
 
-export const heroVideoUrl = 'https://www.youtube.com/watch?v=pvqiR0Q0sGQ&t=3305s'
+type ImportedShow = {
+  id: string
+  title: string
+  genre: string
+  tagline: string
+  poster: string
+  rating: number
+  videoUrl: string
+}
 
-export const starterShows: Show[] = [
+const importedShows: ImportedShow[] = [
   {
-    id: 'midnight-vows',
-    title: 'Midnight Vows',
-    genre: 'Romance Thriller',
-    tagline: 'A runaway bride discovers the man hunting her already knows her darkest secret.',
+    id: 'move-aside-im-the-final-boss',
+    title: "Move Aside! I'm the Final Boss",
+    genre: 'CEO / Secret Identity / Romance',
+    tagline: "Kingsley returns from the battlefield a hidden king and richest man on earth—only to face a brutal breakup that triggers a satisfying revenge arc.",
+    poster: '/placeholders/show-01.jpg',
+    rating: 5.0,
+    videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRuslDXLL3Tb-QTVkg8GCmzAr',
+  },
+  {
+    id: 'double-life-of-my-billionaire-husband',
+    title: 'The Double Life of My Billionaire Husband',
+    genre: 'Billionaire Romance / Secret Identity',
+    tagline: 'A woman unknowingly married to a secret billionaire gets pulled into loyalty tests, hidden wealth, and dramatic reveals.',
+    poster: '/placeholders/show-02.jpg',
+    rating: 4.9,
+    videoUrl: 'https://www.youtube.com/@ReelShort',
+  },
+  {
+    id: 'dont-miss-me-when-im-gone',
+    title: "Don't Miss Me When I'm Gone",
+    genre: 'Heartbreak / Revenge / Second Chances',
+    tagline: 'Only after she leaves does her partner grasp what he lost in this emotional second-chance revenge drama.',
+    poster: '/placeholders/show-03.jpg',
+    rating: 4.8,
+    videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRusAbYd5SDi-yNxkDAdoScvO',
+  },
+  {
+    id: 'the-cursed-alphas-mate',
+    title: "The Cursed Alpha's Mate",
+    genre: 'Paranormal / Werewolf Romance / Fantasy',
+    tagline: 'Heartbreak drives Shay toward Alpha Mal Haywood, a cursed werewolf who may need her as his mate to survive.',
     poster: '/placeholders/show-01.jpg',
     rating: 4.8,
-    status: 'published',
-    episodes: [
-      { id: 'mv-1', title: 'Episode 1: Run', duration: '03:20', cost: 0, status: 'published', unlocked: true },
-      { id: 'mv-2', title: 'Episode 2: The Deal', duration: '03:05', cost: 15, status: 'published' },
-      { id: 'mv-3', title: 'Episode 3: Blood Oath', duration: '03:44', cost: 20, status: 'published' },
-    ],
+    videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRus4HFQ6Xm28YhsK2Z3r1h9P',
   },
   {
-    id: 'city-of-echoes',
-    title: 'City of Echoes',
-    genre: 'Neo-Noir Mystery',
-    tagline: 'Every alley remembers a lie, and every lie points back to her.',
+    id: 'bound-by-vendetta-sleeping-with-the-enemy',
+    title: 'Bound by Vendetta: Sleeping with the Enemy',
+    genre: 'Mafia Boss / Enemies-to-Lovers',
+    tagline: 'Organized crime, deadly rivals, and undeniable chemistry collide in a high-tension enemies-to-lovers setup.',
     poster: '/placeholders/show-02.jpg',
-    rating: 4.6,
-    status: 'published',
-    episodes: [
-      { id: 'ce-1', title: 'Episode 1: White Noise', duration: '02:48', cost: 0, status: 'published', unlocked: true },
-      { id: 'ce-2', title: 'Episode 2: Wiretap', duration: '03:12', cost: 15, status: 'published' },
-      { id: 'ce-3', title: 'Episode 3: Crossfire', duration: '03:31', cost: 20, status: 'published' },
-    ],
+    rating: 4.7,
+    videoUrl: 'https://www.youtube.com/@ReelShort',
   },
   {
-    id: 'hearts-on-trial',
-    title: 'Hearts on Trial',
-    genre: 'Legal Drama',
-    tagline: 'She defends strangers for a living until the next case puts her own family on the stand.',
+    id: 'how-to-tame-a-silver-fox',
+    title: 'How to Tame a Silver Fox',
+    genre: 'Age-Gap / Forbidden Romance / Young Adult',
+    tagline: 'A college seduction plan spirals into a breakout forbidden romance with her father’s business partner.',
     poster: '/placeholders/show-03.jpg',
     rating: 4.7,
-    status: 'published',
-    episodes: [
-      { id: 'ht-1', title: 'Episode 1: Objection', duration: '03:01', cost: 0, status: 'published', unlocked: true },
-      { id: 'ht-2', title: 'Episode 2: The Witness', duration: '03:17', cost: 15, status: 'published' },
-      { id: 'ht-3', title: 'Episode 3: Verdict', duration: '03:58', cost: 20, status: 'published' },
-    ],
+    videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRusqKcB2gU7v1l30o-R3U-tz',
+  },
+  {
+    id: 'undercover-prison-king',
+    title: 'Undercover Prison King',
+    genre: 'Action / Thriller / Undercover',
+    tagline: 'An ex-soldier goes undercover inside a corrupt prison he inherits to expose the criminal leadership from within.',
+    poster: '/placeholders/show-01.jpg',
+    rating: 4.7,
+    videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRuv0-8uS1VuFjNhRJ4k3w2pT',
+  },
+  {
+    id: 'love-at-dangerous-speeds',
+    title: 'Love at Dangerous Speeds',
+    genre: 'Street Racing / Romance / Dark Secret',
+    tagline: 'A runaway bride finds passion with a street racer whose darkest confession ties back to her father’s death.',
+    poster: '/placeholders/show-02.jpg',
+    rating: 4.6,
+    videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRuvqKRhILQM4DHLjxeHIw84B',
+  },
+  {
+    id: 'mommy-dont-cry-daddy-is-sorry',
+    title: "Mommy Don't Cry, Daddy Is Sorry",
+    genre: 'Family Drama / Revenge / Mistaken Identity',
+    tagline: 'A mother believed dead returns with a ruthless alter ego to reclaim her daughter and expose the people who betrayed her.',
+    poster: '/placeholders/show-03.jpg',
+    rating: 4.8,
+    videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRusJEJ4426R76zXPoWRUuJS6',
+  },
+  {
+    id: 'my-stepbrothers-dirty-secret',
+    title: "My Stepbrother's Dirty Secret",
+    genre: 'Forbidden Romance / Teen Drama / Stepsibling',
+    tagline: 'A new school, a millionaire stepfamily, and forbidden chemistry make this one of the year’s most bingeable dramas.',
+    poster: '/placeholders/show-01.jpg',
+    rating: 4.6,
+    videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRuuqIZpB7w7GIUH5m1mNHI24',
   },
 ]
 
-export const starterAdminVideos: AdminVideo[] = [
-  {
-    id: 'vid-1',
-    title: 'Hero Feature Slot',
-    source: 'youtube',
-    sourceValue: heroVideoUrl,
-    uploadLimit: 'Remote embed',
-    status: 'published',
-    featured: true,
-    showId: 'midnight-vows',
-    episodeId: null,
-  },
-  {
-    id: 'vid-2',
-    title: 'Sample Locked Episode',
-    source: 'upload',
-    sourceValue: 'Upload placeholder — max 1.3GB per file',
-    uploadLimit: '1.3GB max upload',
-    status: 'review',
-    featured: false,
-    showId: 'hearts-on-trial',
-    episodeId: 'ht-2',
-  },
-]
+export const heroVideoUrl = importedShows[0].videoUrl
+
+export const starterShows: Show[] = importedShows.map((show) => ({
+  id: show.id,
+  title: show.title,
+  genre: show.genre,
+  tagline: show.tagline,
+  poster: show.poster,
+  rating: show.rating,
+  status: 'published',
+  episodes: [
+    {
+      id: `${show.id}-ep1`,
+      title: 'Preview Playlist',
+      duration: '03:00',
+      cost: 0,
+      status: 'published',
+      unlocked: true,
+      playbackSource: 'youtube',
+      playbackValue: show.videoUrl,
+    },
+  ],
+}))
+
+export const starterAdminVideos: AdminVideo[] = importedShows.map((show, index) => ({
+  id: `vid-${index + 1}`,
+  title: `${show.title} Preview`,
+  source: 'youtube',
+  sourceValue: show.videoUrl,
+  uploadLimit: 'Remote embed',
+  status: 'published',
+  featured: index === 0,
+  showId: show.id,
+  episodeId: `${show.id}-ep1`,
+}))
 
 export const adCarriers = ['Google Ad Manager', 'SpringServe', 'Equativ', 'Publica by IAS', 'Direct sponsor deals']
