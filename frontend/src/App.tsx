@@ -126,15 +126,28 @@ function App() {
       if (!supabase) return
       const { data } = await supabase.auth.getSession()
       if (!mounted) return
-      setSession(data.session)
-      if (data.session) {
+
+      let activeSession = data.session
+      if (!activeSession) {
+        const { session: guestSession, error } = await signInAsGuest()
+        if (!mounted) return
+        if (error) {
+          setAuthMessage(`Guest sign-in failed: ${error.message}`)
+          return
+        }
+        activeSession = guestSession
+        setAuthMessage('Signed in as guest automatically.')
+      }
+
+      setSession(activeSession)
+      if (activeSession) {
         try {
-          const profile = await ensureViewerProfile(data.session)
+          const profile = await ensureViewerProfile(activeSession)
           if (!mounted) return
           setViewerRole(profile?.role ?? 'viewer')
           setCoinBalance(profile?.coin_balance ?? 10)
           setAuthMessage(`Signed in. Role: ${profile?.role ?? 'viewer'}.`)
-          await hydrate(data.session, profile?.role ?? 'viewer')
+          await hydrate(activeSession, profile?.role ?? 'viewer')
         } catch (error) {
           if (!mounted) return
           const message = error instanceof Error ? error.message : 'Profile bootstrap failed'
@@ -340,12 +353,8 @@ function App() {
   return (
     <div className="app-shell">
       <header className="topbar">
-        <div className="brand-lockup">
-          <img src="/reely-logo-dark.jpg" alt="Reely Shorts logo" className="brand-logo brand-logo--wordmark" />
-          <div>
-            <p className="eyebrow">Short drama streaming</p>
-            <h1>REELY SHORTS</h1>
-          </div>
+        <div className="brand-lockup brand-lockup--banner">
+          <img src="/reely-banner.jpg" alt="Reely Shorts banner logo" className="brand-logo brand-logo--banner" />
         </div>
 
         <nav className="topbar-nav" aria-label="Primary navigation">

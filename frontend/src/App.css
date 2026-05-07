@@ -47,10 +47,9 @@ button {
   gap: 1.15rem;
 }
 
-.brand-lockup h1 {
-  margin: 0;
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
-  letter-spacing: 0.04em;
+.brand-lockup--banner {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .brand-logo {
@@ -58,11 +57,12 @@ button {
   display: block;
 }
 
-.brand-logo--wordmark {
-  width: clamp(156px, 18vw, 210px);
+.brand-logo--banner {
+  width: clamp(220px, 38vw, 460px);
+  max-width: 100%;
   height: auto;
-  padding: 0.55rem 0.7rem;
-  background: #05070d;
+  padding: 0.45rem 0.9rem;
+  background: linear-gradient(180deg, rgba(7, 7, 12, 0.96), rgba(16, 16, 24, 0.96));
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
