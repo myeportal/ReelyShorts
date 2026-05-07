@@ -35,7 +35,7 @@ const importedShows: ImportedShow[] = [
     tagline: 'A woman unknowingly married to a secret billionaire gets pulled into loyalty tests, hidden wealth, and dramatic reveals.',
     poster: posters.romance,
     rating: 4.9,
-    videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRuslDXLL3Tb-QTVkg8GCmzAr',
+    videoUrl: 'https://www.youtube.com/playlist?list=PL_a_uLZhYxLCMuu66Omi2J9U1lKE2hFmU',
   },
   {
     id: 'dont-miss-me-when-im-gone',
@@ -44,7 +44,7 @@ const importedShows: ImportedShow[] = [
     tagline: 'Only after she leaves does her partner grasp what he lost in this emotional second-chance revenge drama.',
     poster: posters.dark,
     rating: 4.8,
-    videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRusAbYd5SDi-yNxkDAdoScvO',
+    videoUrl: 'https://www.youtube.com/watch?v=EiYYHh_KjMQ',
   },
   {
     id: 'the-cursed-alphas-mate',
@@ -62,7 +62,7 @@ const importedShows: ImportedShow[] = [
     tagline: 'Organized crime, deadly rivals, and undeniable chemistry collide in a high-tension enemies-to-lovers setup.',
     poster: posters.dark,
     rating: 4.7,
-    videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRusAbYd5SDi-yNxkDAdoScvO',
+    videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRuuErBjCfVPk_1-5AA2eW3uc',
   },
   {
     id: 'how-to-tame-a-silver-fox',
@@ -107,7 +107,7 @@ const importedShows: ImportedShow[] = [
     tagline: 'A new school, a millionaire stepfamily, and forbidden chemistry make this one of the year’s most bingeable dramas.',
     poster: posters.romance,
     rating: 4.6,
-    videoUrl: 'https://www.youtube.com/playlist?list=PLZola-ZiDRuuqIZpB7w7GIUH5m1mNHI24',
+    videoUrl: 'https://www.youtube.com/playlist?list=PLd1AX5yB8l3TTOVD1AOonZM-FZPJGZ3fj',
   },
 ]
 
