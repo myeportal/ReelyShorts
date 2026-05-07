@@ -494,7 +494,14 @@ function HomeScreen({ coinBalance, adCount, totalPublished, activeShow, shows, s
           </div>
           <div className="phone-strip">
             {shows.map((show) => (
-              <button key={show.id} className={`mini-poster ${show.id === activeShow.id ? 'active' : ''}`} onClick={() => setActiveShowId(show.id)} style={{ backgroundImage: `url(${show.poster})` }} aria-label={`Open ${show.title}`} />
+              <Link
+                key={show.id}
+                className={`mini-poster ${show.id === activeShow.id ? 'active' : ''}`}
+                to={`/show/${show.id}`}
+                onClick={() => setActiveShowId(show.id)}
+                style={{ backgroundImage: `url(${show.poster})` }}
+                aria-label={`Open ${show.title}`}
+              />
             ))}
           </div>
           <div className="phone-nav"><span className="active">Home</span><span>Search</span><span>My List</span><span>Coins</span><span>Profile</span></div>
@@ -510,11 +517,14 @@ function HomeScreen({ coinBalance, adCount, totalPublished, activeShow, shows, s
         <div className="show-grid show-grid--tall">
           {shows.map((show) => (
             <article className={`show-card show-card--tall ${show.id === activeShow.id ? 'selected' : ''}`} key={show.id}>
-              <button className="poster-hit" onClick={() => setActiveShowId(show.id)}><img src={show.poster} alt={`${show.title} poster placeholder`} className="show-poster show-poster--tall" /></button>
+              <Link className="poster-hit" to={`/show/${show.id}`} onClick={() => setActiveShowId(show.id)}><img src={show.poster} alt={`${show.title} poster placeholder`} className="show-poster show-poster--tall" /></Link>
               <div className="show-body">
                 <div className="show-title-row"><div><h4>{show.title}</h4><p>{show.genre}</p></div><span>⭐ {show.rating}</span></div>
                 <p className="tagline">{show.tagline}</p>
-                <Link className="ghost-link" to={`/show/${show.id}`}>View details</Link>
+                <div className="hero-actions">
+                  <Link className="ghost-link" to={`/show/${show.id}`} onClick={() => setActiveShowId(show.id)}>View details</Link>
+                  <Link className="ghost-link" to={`/watch/${show.id}/${show.episodes[0]?.id ?? 'episode-1'}`} onClick={() => setActiveShowId(show.id)}>Watch now</Link>
+                </div>
               </div>
             </article>
           ))}
