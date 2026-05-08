@@ -385,10 +385,10 @@ function App() {
         </div>
 
         <nav className="topbar-nav" aria-label="Primary navigation">
-          <Link to="/">Home</Link>
-          <Link to={`/show/${activeShow.id}`}>Show Detail</Link>
-          <Link to={`/watch/${activeShow.id}/${activeShow.episodes[0]?.id ?? 'episode-1'}`}>Player</Link>
-          <Link to="/admin">CMS Admin</Link>
+          <Link to="/">For You</Link>
+          <Link to={`/show/${activeShow.id}`}>Series</Link>
+          <Link to={`/watch/${activeShow.id}/${activeShow.episodes[0]?.id ?? 'episode-1'}`}>Watch</Link>
+          <Link to="/admin">Studio</Link>
         </nav>
       </header>
 
@@ -458,8 +458,8 @@ function HomeScreen({ coinBalance, adCount, totalPublished, activeShow, shows, s
       <section className="hero-card hero-card--cinematic">
         <div className="hero-backdrop" style={{ backgroundImage: `url(${activeShow.poster})` }} />
         <div className="hero-copy hero-copy--overlay">
-          <span className="feature-badge">Featured</span>
-          <p className="eyebrow">Movie box</p>
+          <span className="feature-badge">Top Pick</span>
+          <p className="eyebrow">For you tonight</p>
           <h2>{activeShow.title}</h2>
           <p className="hero-tagline">{activeShow.tagline}</p>
           <div className="meta-pills">
@@ -469,8 +469,8 @@ function HomeScreen({ coinBalance, adCount, totalPublished, activeShow, shows, s
             <span className="pill">{viewerMode === 'signed-in' ? 'Persistent viewer' : 'Guest mode'}</span>
           </div>
           <div className="hero-actions">
-            <Link to={`/watch/${activeShow.id}/${activeShow.episodes[0]?.id ?? 'episode-1'}`}>Start watching free</Link>
-            <button onClick={watchRewardedAd}>Watch ad to earn coins</button>
+            <Link to={`/watch/${activeShow.id}/${activeShow.episodes[0]?.id ?? 'episode-1'}`}>Watch free now</Link>
+            <button onClick={watchRewardedAd}>Earn coins</button>
           </div>
           <div className="stats-row">
             <article><strong>{coinBalance}</strong><span>Coins</span></article>
@@ -481,9 +481,9 @@ function HomeScreen({ coinBalance, adCount, totalPublished, activeShow, shows, s
       </section>
 
       <section className="mobile-preview section-block">
-        <div className="section-heading compact"><div><p className="eyebrow">Mobile preview</p><h3>{viewerMode === 'signed-in' ? 'Viewer session active' : 'Guest viewer path'}</h3></div></div>
+        <div className="section-heading compact"><div><p className="eyebrow">App preview</p><h3>{viewerMode === 'signed-in' ? 'Signed-in mobile feel' : 'Guest mobile feel'}</h3></div></div>
         <div className="phone-shell">
-          <div className="phone-topbar"><span>🔍</span><span className="search-pill">Search short dramas</span><span>🔔</span></div>
+          <div className="phone-topbar"><span>⌕</span><span className="search-pill">Search romance, revenge, alpha...</span><span>♡</span></div>
           <div className="phone-hero" style={{ backgroundImage: `url(${activeShow.poster})` }}>
             <div className="phone-hero-overlay">
               <span className="feature-badge">HOT</span>
@@ -513,7 +513,7 @@ function HomeScreen({ coinBalance, adCount, totalPublished, activeShow, shows, s
       </section>
 
       <section className="section-block">
-        <div className="section-heading"><div><p className="eyebrow">Trending now</p><h3>Poster-first discovery inspired by the references you sent</h3></div><span className="pill">Ads unlock episodes for guests</span></div>
+        <div className="section-heading"><div><p className="eyebrow">Trending now</p><h3>Portrait-first discovery with that familiar short-drama rhythm</h3></div><span className="pill">Ads unlock episodes for guests</span></div>
         <div className="show-grid show-grid--tall">
           {shows.map((show) => (
             <article className={`show-card show-card--tall ${show.id === activeShow.id ? 'selected' : ''}`} key={show.id}>
