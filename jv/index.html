@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ReelyShorts White-Label Platform | JV Affiliate Splash Page</title>
+  <title>ReelyShorts White-Label Platform | JV Splash Page</title>
   <style>
     :root {
-      --bg: #06111f;
-      --bg-soft: #0c1830;
-      --panel: rgba(10, 20, 38, 0.86);
-      --panel-2: rgba(18, 32, 58, 0.82);
+      --bg: #040915;
+      --bg-2: #0a1326;
+      --panel: rgba(12, 21, 39, 0.82);
+      --panel-2: rgba(18, 29, 53, 0.8);
       --line: rgba(255,255,255,0.08);
-      --text: #f6f9ff;
-      --muted: #aeb9d0;
+      --text: #f5f8ff;
+      --muted: #aab7cf;
       --primary: #8b5cf6;
       --primary-2: #2563eb;
-      --accent: #ff5a8f;
-      --good: #30d19c;
-      --gold: #f7d17d;
-      --shadow: 0 22px 60px rgba(0,0,0,0.34);
+      --accent: #ff5f8f;
+      --good: #31d49b;
+      --gold: #f3d27a;
+      --shadow: 0 24px 60px rgba(0,0,0,0.34);
       --radius-xl: 30px;
       --radius-lg: 22px;
       --radius-md: 16px;
@@ -32,25 +32,25 @@
       color: var(--text);
       line-height: 1.6;
       background:
-        radial-gradient(circle at top left, rgba(139, 92, 246, 0.2), transparent 28%),
-        radial-gradient(circle at top right, rgba(37, 99, 235, 0.18), transparent 24%),
-        linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 52%, #050c16 100%);
+        radial-gradient(circle at top left, rgba(139,92,246,0.20), transparent 28%),
+        radial-gradient(circle at top right, rgba(37,99,235,0.18), transparent 26%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 48%, #040812 100%);
     }
     a { color: inherit; text-decoration: none; }
     img, video { max-width: 100%; display: block; }
 
     .container { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
-    .section { padding: 86px 0; }
+    .section { padding: 88px 0; }
     .section-tight { padding: 56px 0; }
     .section-title {
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      line-height: 1.04;
+      font-size: clamp(2rem, 4vw, 3.35rem);
+      line-height: 1.03;
       letter-spacing: -0.03em;
       text-align: center;
       margin-bottom: 14px;
     }
     .section-copy {
-      max-width: 780px;
+      max-width: 800px;
       margin: 0 auto 34px;
       text-align: center;
       color: var(--muted);
@@ -61,8 +61,8 @@
       position: sticky;
       top: 0;
       z-index: 90;
-      background: rgba(4, 10, 22, 0.72);
       backdrop-filter: blur(16px);
+      background: rgba(4, 9, 21, 0.72);
       border-bottom: 1px solid var(--line);
     }
     .nav {
@@ -81,7 +81,7 @@
     }
     .brand span {
       display: block;
-      font-size: 0.85rem;
+      font-size: .85rem;
       color: var(--muted);
     }
 
@@ -100,7 +100,7 @@
     .btn {
       color: white;
       background: linear-gradient(135deg, var(--primary), var(--primary-2));
-      box-shadow: 0 16px 34px rgba(73, 91, 231, 0.34);
+      box-shadow: 0 16px 34px rgba(76, 98, 238, 0.34);
     }
     .btn-secondary {
       color: var(--text);
@@ -108,11 +108,11 @@
       background: rgba(255,255,255,0.04);
     }
 
-    .hero { padding: 54px 0 42px; }
+    .hero { padding: 56px 0 42px; }
     .hero-wrap {
       display: grid;
-      grid-template-columns: 1.03fr 0.97fr;
-      gap: 34px;
+      grid-template-columns: 1.04fr 0.96fr;
+      gap: 36px;
       align-items: center;
     }
     .eyebrow {
@@ -121,8 +121,8 @@
       gap: 10px;
       padding: 8px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(247,209,125,0.18);
-      background: rgba(247,209,125,0.09);
+      border: 1px solid rgba(243,210,122,0.18);
+      background: rgba(243,210,122,0.09);
       color: var(--gold);
       font-size: .8rem;
       font-weight: 800;
@@ -131,16 +131,16 @@
       margin-bottom: 18px;
     }
     .hero h1 {
-      font-size: clamp(2.7rem, 5vw, 5.2rem);
-      line-height: .98;
-      letter-spacing: -0.045em;
+      font-size: clamp(2.8rem, 5vw, 5.3rem);
+      line-height: .97;
+      letter-spacing: -0.05em;
       margin-bottom: 18px;
-      max-width: 720px;
+      max-width: 760px;
     }
     .lead {
-      font-size: 1.09rem;
+      font-size: 1.08rem;
       color: var(--muted);
-      max-width: 720px;
+      max-width: 740px;
       margin-bottom: 26px;
     }
     .hero-actions {
@@ -155,72 +155,70 @@
       gap: 16px;
       color: var(--muted);
       font-size: .95rem;
+      margin-bottom: 16px;
+    }
+    .hero-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(49,212,155,0.09);
+      border: 1px solid rgba(49,212,155,0.14);
+      color: #d9fff1;
+      font-weight: 700;
     }
 
-    .stats, .grid-3, .grid-2, .bonus-grid, .deliverables-grid {
-      display: grid;
-      gap: 22px;
-    }
-    .stats, .grid-3, .bonus-grid, .deliverables-grid { grid-template-columns: repeat(3, 1fr); }
-    .grid-2 { grid-template-columns: 1.02fr 0.98fr; }
-
-    .panel, .video-card, .pricing-card, .faq-item, .checklist, .closing-box {
+    .hero-card,
+    .panel,
+    .pricing-card,
+    .checklist,
+    .faq-item,
+    .closing-box,
+    .video-meta,
+    .proof-box {
       border: 1px solid var(--line);
       background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
       box-shadow: var(--shadow);
       border-radius: var(--radius-xl);
     }
-    .panel, .pricing-card, .checklist, .closing-box { padding: 26px; }
-    .panel h3, .pricing-card h3, .checklist h3 { margin-bottom: 10px; font-size: 1.18rem; }
-    .panel p, .pricing-card p, .checklist p, .faq-answer, li { color: var(--muted); }
 
-    .video-card {
+    .hero-card {
       overflow: hidden;
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+    }
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.10), transparent 44%);
+      pointer-events: none;
+      z-index: 1;
     }
     .video-shell {
       aspect-ratio: 16 / 9;
       background:
-        linear-gradient(135deg, rgba(139,92,246,0.14), rgba(37,99,235,0.18)),
+        linear-gradient(135deg, rgba(139,92,246,0.16), rgba(37,99,235,0.18)),
         #050b15;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
       overflow: hidden;
-    }
-    .video-shell::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at center, rgba(255,255,255,0.09), transparent 46%);
-      pointer-events: none;
-    }
-    .video-placeholder {
-      text-align: center;
-      max-width: 420px;
-      padding: 24px;
       position: relative;
-      z-index: 1;
     }
-    .play-badge {
-      width: 84px;
-      height: 84px;
-      border-radius: 999px;
-      margin: 0 auto 18px;
-      background: linear-gradient(135deg, var(--accent), var(--primary));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 16px 34px rgba(255,90,143,0.28);
-      font-size: 1.7rem;
-      font-weight: 800;
+    .video-shell video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+      z-index: 0;
     }
     .video-meta {
-      padding: 20px 22px 24px;
-      border-top: 1px solid var(--line);
+      margin-top: 16px;
+      padding: 18px 20px 20px;
+      background: rgba(8,14,27,0.64);
     }
-    .video-meta strong { display: block; margin-bottom: 8px; font-size: 1.05rem; }
+    .video-meta strong { display: block; font-size: 1.02rem; margin-bottom: 6px; }
+    .video-meta p { color: var(--muted); }
     .video-meta code {
       display: inline-block;
       margin-top: 12px;
@@ -228,8 +226,23 @@
       border-radius: 999px;
       background: rgba(255,255,255,0.05);
       border: 1px solid var(--line);
-      color: #dfe7ff;
-      font-size: .86rem;
+      color: #dce6ff;
+      font-size: .85rem;
+    }
+
+    .stats, .grid-3, .grid-2, .proof-grid, .deliverables-grid, .bonus-grid {
+      display: grid;
+      gap: 22px;
+    }
+    .stats, .grid-3, .proof-grid, .deliverables-grid, .bonus-grid { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: 1.04fr 0.96fr; }
+
+    .panel, .pricing-card, .checklist, .closing-box, .proof-box { padding: 26px; }
+    .panel h3, .pricing-card h3, .checklist h3, .proof-box h3 { margin-bottom: 10px; font-size: 1.18rem; }
+    .panel p, .pricing-card p, .checklist p, .proof-box p, .faq-answer, li { color: var(--muted); }
+
+    .proof-box {
+      background: linear-gradient(180deg, rgba(139,92,246,0.08), rgba(255,255,255,0.02));
     }
 
     .pill {
@@ -241,19 +254,16 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: .08em;
-      background: rgba(139, 92, 246, 0.16);
+      background: rgba(139,92,246,0.16);
       color: #dfccff;
       border: 1px solid rgba(223,204,255,0.16);
       margin-bottom: 14px;
     }
-    .price {
-      font-size: 3.1rem;
-      line-height: .95;
-      letter-spacing: -0.05em;
-      font-weight: 900;
-      margin: 10px 0 12px;
+    .pricing-card.featured {
+      border-color: rgba(243,210,122,0.28);
+      background: linear-gradient(180deg, rgba(243,210,122,0.09), rgba(255,255,255,0.03));
+      transform: translateY(-8px);
     }
-    .price small { font-size: 1rem; color: var(--muted); font-weight: 600; }
     .pricing-card ul, .checklist ul {
       list-style: none;
       display: grid;
@@ -266,6 +276,14 @@
       margin-right: 10px;
       font-weight: 800;
     }
+    .price {
+      font-size: 3rem;
+      line-height: .95;
+      letter-spacing: -0.05em;
+      font-weight: 900;
+      margin: 8px 0 12px;
+    }
+    .price small { font-size: 1rem; color: var(--muted); font-weight: 600; }
     .subtle { font-size: .92rem; color: var(--muted); }
 
     .faq {
@@ -295,8 +313,9 @@
 
     .closing-box {
       text-align: center;
-      max-width: 900px;
+      max-width: 920px;
       margin: 0 auto;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
     }
     .closing-box h2 {
       font-size: clamp(2rem, 4vw, 3rem);
@@ -319,9 +338,10 @@
     }
 
     @media (max-width: 980px) {
-      .hero-wrap, .stats, .grid-3, .grid-2, .bonus-grid, .deliverables-grid {
+      .hero-wrap, .stats, .grid-3, .grid-2, .proof-grid, .deliverables-grid, .bonus-grid {
         grid-template-columns: 1fr;
       }
+      .pricing-card.featured { transform: none; }
       .section { padding: 68px 0; }
     }
 
@@ -329,7 +349,7 @@
       .container { width: min(var(--max), calc(100% - 20px)); }
       .nav { padding: 14px 0; }
       .btn, .btn-secondary { padding: 13px 18px; }
-      .panel, .pricing-card, .checklist, .closing-box { padding: 22px; }
+      .panel, .pricing-card, .checklist, .closing-box, .proof-box { padding: 22px; }
       .trust-strip { gap: 10px; font-size: .88rem; }
     }
   </style>
@@ -339,9 +359,9 @@
     <div class="container nav">
       <a href="#top" class="brand">
         <strong>ReelyShorts</strong>
-        <span>JV Affiliate White-Label Splash Page</span>
+        <span>White-Label JV Splash Page</span>
       </a>
-      <a href="#offer" class="btn">Promote The Offer</a>
+      <a href="#offer" class="btn">See The Offer</a>
     </div>
   </header>
 
@@ -349,32 +369,36 @@
     <section class="hero">
       <div class="container hero-wrap">
         <div>
-          <div class="eyebrow">White Label Source Code • Short Drama Platform</div>
-          <h1>Promote a binge-ready short-form streaming platform your buyers can rebrand and deploy fast.</h1>
-          <p class="lead">This JV splash page sells the ReelyShorts finished package as a white-label source-code product: React frontend, Supabase wiring, monetization framework, deploy instructions, and a clean path for buyers who want to launch their own short-drama or reels-style app without starting from zero.</p>
+          <div class="eyebrow">White Label Source Code • Short Drama Streaming Platform</div>
+          <h1>Sell a binge-worthy short drama app your buyers can rebrand, deploy, and turn into their own content platform.</h1>
+          <p class="lead">ReelyShorts is not just a raw code dump. It is a positioned white-label opportunity built around a real short-form streaming framework: React frontend, Supabase wiring, episode progression, coin unlock mechanics, monetization scaffolding, and a buyer-ready deployment path that makes the offer feel launchable.</p>
 
           <div class="hero-actions">
-            <a href="#video" class="btn">Watch The Promo Slot</a>
-            <a href="#deliverables" class="btn-secondary">See What Buyers Get</a>
+            <a href="#video" class="btn">Watch The Demo</a>
+            <a href="#deliverables" class="btn-secondary">What Buyers Receive</a>
           </div>
 
           <div class="trust-strip">
             <span>🎬 White-label source package</span>
             <span>⚙️ Deploy-ready framework</span>
-            <span>📦 ZIP delivery-ready asset</span>
+            <span>📦 ZIP handoff-ready product</span>
           </div>
+
+          <div class="hero-note">Built to help affiliates sell a sharper, more premium white-label opportunity.</div>
         </div>
 
-        <div class="video-card" id="video">
-          <div class="video-shell">
-            <video controls playsinline preload="metadata" poster="" aria-label="ReelyShorts promo video">
-              <source src="./media/reelyshorts-promo.mp4" type="video/mp4" />
-              Your browser does not support the promo video.
-            </video>
+        <div>
+          <div class="hero-card" id="video">
+            <div class="video-shell">
+              <video controls playsinline preload="metadata" aria-label="ReelyShorts promo video">
+                <source src="./media/reelyshorts-promo.mp4" type="video/mp4" />
+                Your browser does not support the promo video.
+              </video>
+            </div>
           </div>
           <div class="video-meta">
             <strong>Featured promo video</strong>
-            <p>The top slot is now wired to the supplied <code>.mp4</code> file. If you want, I can still switch this to a poster-first click-to-play style or replace it with a different Galaxy.ai export later.</p>
+            <p>The hero slot is now wired to the current Galaxy.ai promo file so the page opens with an actual visual pitch instead of a placeholder block.</p>
             <code>Current file: ./media/reelyshorts-promo.mp4</code>
           </div>
         </div>
@@ -384,16 +408,33 @@
     <section class="section-tight">
       <div class="container stats">
         <article class="panel">
-          <h3>What it is</h3>
-          <p>A white-label short-drama/reels streaming codebase with auth, episode progression, coin unlock mechanics, rewarded-ad scaffolding, and a deployable frontend stack.</p>
+          <h3>What the product is</h3>
+          <p>A white-label short-form streaming codebase with auth, episode progression, coin unlock mechanics, and deployment scaffolding already in place.</p>
         </article>
         <article class="panel">
           <h3>What buyers want</h3>
-          <p>A faster way to launch a branded app in a hot content category without paying to build everything custom from scratch.</p>
+          <p>A faster path into the short-drama / reels-style app space without starting from scratch or funding a custom build.</p>
         </article>
         <article class="panel">
           <h3>What affiliates sell</h3>
-          <p>Speed, ownership, rebrandability, and a monetization-ready framework packaged as a finished implementation asset.</p>
+          <p>Speed, ownership, rebrandability, and a framework that already feels closer to launch than most “source code” offers do.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container proof-grid">
+        <article class="proof-box">
+          <h3>More than a template</h3>
+          <p>The pitch here is not “look, files.” It is “here is a white-label streaming business starter positioned around a hot content model.” That sells better.</p>
+        </article>
+        <article class="proof-box">
+          <h3>Easy value story</h3>
+          <p>Affiliates can talk about drama apps, reels platforms, creator ecosystems, motivation streams, niche content hubs, or short-course media channels.</p>
+        </article>
+        <article class="proof-box">
+          <h3>Cleaner buyer expectation</h3>
+          <p>The page now sets up source code, framework assets, deployment notes, and ZIP delivery in a more polished and buyer-friendly way.</p>
         </article>
       </div>
     </section>
@@ -401,20 +442,20 @@
     <section id="deliverables" class="section">
       <div class="container">
         <h2 class="section-title">What the finished package includes</h2>
-        <p class="section-copy">This section is tuned for affiliates: clear deliverables, clean expectations, and no fuzzy hand-waving about what the buyer is actually receiving.</p>
+        <p class="section-copy">This section is designed to remove ambiguity. Buyers and affiliates should both understand exactly what is being sold and what the handoff looks like.</p>
 
         <div class="deliverables-grid">
           <article class="panel">
-            <h3>Complete source package</h3>
-            <p>React + Vite frontend, Supabase schema, seed data, docs, and recovered framework structure for the current ReelyShorts build.</p>
+            <h3>Complete source framework</h3>
+            <p>Frontend app, supporting framework files, current repo structure, and the core product foundation for the ReelyShorts platform.</p>
           </article>
           <article class="panel">
-            <h3>Deployment instructions</h3>
-            <p>Step-by-step notes for GitHub, Vercel, Supabase environment variables, schema import, and launch setup for a buyer handoff.</p>
+            <h3>Deployment guide</h3>
+            <p>Practical instructions for GitHub, Vercel, Supabase setup, environment variables, and schema import so the buyer has a clean launch path.</p>
           </article>
           <article class="panel">
-            <h3>White-label positioning</h3>
-            <p>Built for buyers who want to rebrand the platform into drama, motivation, coaching clips, faith content, lifestyle, memes, or niche short-form media plays.</p>
+            <h3>White-label freedom</h3>
+            <p>Suitable for short drama, creator clips, meme feeds, motivation content, course teasers, niche entertainment channels, or branded media plays.</p>
           </article>
         </div>
       </div>
@@ -423,26 +464,26 @@
     <section class="section-tight">
       <div class="container grid-2">
         <div class="checklist">
-          <h3>Buyer-facing deliverables checklist</h3>
+          <h3>Buyer-facing deliverables</h3>
           <ul>
-            <li>ReelyShorts source code and framework files</li>
-            <li>Frontend app folder ready for Vercel-style deployment</li>
-            <li>Supabase schema and database setup notes</li>
-            <li>Deployment README for non-developer buyers</li>
-            <li>White-label splash page for affiliate promotion</li>
-            <li>Final ZIP package to deliver after purchase</li>
+            <li>ReelyShorts source code and framework package</li>
+            <li>Frontend app prepared for Vercel-style deployment</li>
+            <li>Supabase schema and setup notes</li>
+            <li>Deployment instructions included with the package</li>
+            <li>Affiliate splash page as part of the white-label asset stack</li>
+            <li>Final ZIP package for post-purchase delivery</li>
           </ul>
         </div>
 
         <div class="checklist">
-          <h3>Affiliate angle</h3>
+          <h3>Why this is easy to promote</h3>
           <ul>
-            <li>Hot market appeal: short-form streaming and drama apps</li>
-            <li>Easy before/after transformation story: from codebase to branded platform</li>
-            <li>Clear value stack instead of vague software promises</li>
-            <li>Simple demo-video insertion point for better conversion</li>
-            <li>Positionable as a white-label digital asset, not just raw files</li>
-            <li>Strong fit for JVZoo, WarriorPlus, direct affiliates, or private partners</li>
+            <li>Short-form streaming is a strong attention category</li>
+            <li>White-label ownership gives buyers a clear end goal</li>
+            <li>Visual demo story is simple and attractive</li>
+            <li>Deploy/rebrand angle feels practical, not abstract</li>
+            <li>Works for JVZoo, private affiliates, or direct offers</li>
+            <li>Stronger than just selling “an app clone” with no positioning</li>
           </ul>
         </div>
       </div>
@@ -450,47 +491,47 @@
 
     <section id="offer" class="section">
       <div class="container">
-        <h2 class="section-title">The splash-page offer structure</h2>
-        <p class="section-copy">This is written to feel like a real white-label offer, not a dev dump. You can revise price, bonuses, and scarcity later without changing the core structure.</p>
+        <h2 class="section-title">A stronger splash-page offer structure</h2>
+        <p class="section-copy">This version frames the opportunity in layers: core asset, positioned bonus stack, and clear ZIP delivery — which makes the whole pitch feel more complete and more saleable.</p>
 
         <div class="grid-3">
           <article class="pricing-card">
             <span class="pill">Core asset</span>
             <h3>White-Label Source Package</h3>
-            <div class="price">Your Price <small>set later</small></div>
-            <p>Use this card as the main headline offer block once you lock the price and checkout path.</p>
+            <div class="price">Main Offer <small>price to set</small></div>
+            <p>The primary asset block for buyers who want the codebase, framework, and launchable platform foundation.</p>
             <ul>
-              <li>Source code + framework delivery</li>
-              <li>Rebrandable short-form platform</li>
-              <li>Deployment guide included</li>
+              <li>Source code and core framework</li>
+              <li>White-label rebrand potential</li>
+              <li>Deploy guide included</li>
             </ul>
-            <div class="subtle">Recommended as the main buyer-facing package.</div>
+            <div class="subtle">Use this as the main buyer-facing package.</div>
           </article>
 
-          <article class="pricing-card">
-            <span class="pill">Bonus stack</span>
-            <h3>Positioned extras</h3>
-            <div class="price">Optional <small>upsell-ready</small></div>
-            <p>Use this block for bonuses like setup notes, extra templates, ad wiring notes, or launch copy once you finalize the stack.</p>
+          <article class="pricing-card featured">
+            <span class="pill">Best angle</span>
+            <h3>Platform-in-a-box positioning</h3>
+            <div class="price">Higher Value <small>better perception</small></div>
+            <p>This is the conversion angle that matters most: not just files, but a business-ready short-form streaming starter platform that buyers can shape into their own brand.</p>
             <ul>
-              <li>Deployment quick-start sheet</li>
-              <li>Offer positioning notes</li>
-              <li>Affiliate-ready promo framing</li>
+              <li>Clear transformation story</li>
+              <li>Better affiliate talking points</li>
+              <li>Feels bigger than a simple template sale</li>
             </ul>
-            <div class="subtle">Keeps the offer feeling more complete without changing the core product.</div>
+            <div class="subtle">This should be the center of the page psychologically.</div>
           </article>
 
           <article class="pricing-card">
             <span class="pill">Delivery</span>
             <h3>ZIP package handoff</h3>
             <div class="price">Instant <small>post-purchase</small></div>
-            <p>The page is built around delivering a finished ZIP package after sale, with the rest of the buyer journey documented clearly.</p>
+            <p>The splash page is built around a clean finished-package expectation so the buyer understands they are receiving a deliverable, not chasing missing pieces.</p>
             <ul>
               <li>ZIP delivery expectation set up front</li>
-              <li>Simple buyer handoff experience</li>
-              <li>Easy to pair with secure checkout later</li>
+              <li>Straightforward product-access framing</li>
+              <li>Easy to pair with checkout later</li>
             </ul>
-            <div class="subtle">Works well for a JVZoo product-access flow.</div>
+            <div class="subtle">Good fit for a JVZoo-style purchase flow.</div>
           </article>
         </div>
       </div>
@@ -498,21 +539,21 @@
 
     <section class="section-tight">
       <div class="container">
-        <h2 class="section-title">Suggested deployment story for buyers</h2>
-        <p class="section-copy">Keep this part simple. Buyers should feel like deployment is structured and achievable, not like they are buying a headache.</p>
+        <h2 class="section-title">Simple deployment story for buyers</h2>
+        <p class="section-copy">Keep the technical story short and confidence-building. Buyers do not need every engineering detail here — they need to believe deployment is structured and realistic.</p>
 
         <div class="bonus-grid">
           <article class="panel">
             <h3>1. Unzip and review</h3>
-            <p>Open the finished package, review the frontend and docs folders, and identify the deployment files and environment-variable steps.</p>
+            <p>Open the finished package, review the included folders, and identify the frontend, docs, and deployment steps.</p>
           </article>
           <article class="panel">
-            <h3>2. Connect hosting</h3>
-            <p>Import to GitHub/Vercel, add Supabase credentials, and apply the included schema so auth and content structures are ready.</p>
+            <h3>2. Connect the stack</h3>
+            <p>Push to GitHub, import into Vercel, connect Supabase, add environment variables, and apply the included schema.</p>
           </article>
           <article class="panel">
             <h3>3. Rebrand and launch</h3>
-            <p>Swap name, logo, content, colors, and media assets, then publish the buyer’s own short-form streaming brand.</p>
+            <p>Swap the branding, load media and episodes, and launch the buyer’s own short-form content platform under their own identity.</p>
           </article>
         </div>
       </div>
@@ -520,23 +561,27 @@
 
     <section class="section">
       <div class="container">
-        <h2 class="section-title">FAQ for affiliates and buyers</h2>
+        <h2 class="section-title">FAQ for buyers and affiliates</h2>
         <div class="faq">
           <div class="faq-item">
             <button class="faq-question">What is being sold here exactly? <span>+</span></button>
-            <div class="faq-answer">A white-label product package built around the ReelyShorts source code, current framework structure, and buyer-facing deployment instructions, delivered as a finished ZIP asset.</div>
+            <div class="faq-answer">A white-label product package built around the current ReelyShorts source code, framework files, deployment notes, and a buyer-facing handoff path designed for ZIP delivery.</div>
           </div>
           <div class="faq-item">
-            <button class="faq-question">Will the page support a promo video? <span>+</span></button>
-            <div class="faq-answer">Yes. The hero is already structured for a local <code>.mp4</code> or an embedded player/iframe replacement. Once you send the Galaxy.ai source file, I can wire it in cleanly.</div>
+            <button class="faq-question">Can this page support promo media properly? <span>+</span></button>
+            <div class="faq-answer">Yes. The hero already supports the local <code>.mp4</code> promo file you supplied, and it can still be upgraded later to a poster-first or custom playback treatment if needed.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question">Can this be adapted for JVZoo? <span>+</span></button>
-            <div class="faq-answer">Yes. The structure is already positioned like a JV affiliate splash page. The missing pieces are the final checkout URL, payout details, and any launch-specific scarcity or bonus language you want to use.</div>
+            <div class="faq-answer">Yes. The structure already works as a JV or affiliate splash page. The remaining launch details are the final checkout link, pricing, commission angle, and any urgency or bonus copy you want to layer in.</div>
           </div>
           <div class="faq-item">
             <button class="faq-question">Does this disturb the main ReelyShorts app? <span>+</span></button>
-            <div class="faq-answer">No. This package sits in the repo’s <code>jv/</code> area and is designed as a separate promotional asset, not a live-app rewrite.</div>
+            <div class="faq-answer">No. This page lives inside <code>jv/</code> as a separate promotional asset and does not rewrite the production frontend.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What still needs finalizing? <span>+</span></button>
+            <div class="faq-answer">Mainly the commercial details: final price, checkout path, affiliate commission messaging, launch scarcity, and any extra bonus stack you want included in the offer.</div>
           </div>
         </div>
       </div>
@@ -545,11 +590,11 @@
     <section class="section-tight">
       <div class="container">
         <div class="closing-box">
-          <h2>A cooler white-label splash page is now in place.</h2>
-          <p>This version is built to feel cleaner, more premium, and more affiliate-friendly than the old placeholder. Once you send the Galaxy.ai promo video, I can finish the media slot and then bundle the page into the final delivery ZIP.</p>
+          <h2>The page now sells the idea a lot harder.</h2>
+          <p>This pass upgrades the ReelyShorts JV asset from a rough placeholder into a more cinematic, premium, and affiliate-friendly splash page. The structure is stronger, the sequencing is better, and the top-of-page video is now doing real selling work.</p>
           <div class="closing-actions">
-            <a href="#video" class="btn">Finish The Video Slot</a>
-            <a href="#top" class="btn-secondary">Back to top</a>
+            <a href="#video" class="btn">Review The Hero</a>
+            <a href="#offer" class="btn-secondary">Review The Funnel</a>
           </div>
         </div>
       </div>
