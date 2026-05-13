@@ -105,6 +105,24 @@ const importedShows: ImportedShow[] = [
     rating: 4.6,
     videoUrl: 'https://www.youtube.com/playlist?list=PLd1AX5yB8l3TTOVD1AOonZM-FZPJGZ3fj',
   },
+  {
+    id: 'the-return-of-the-lost-heiress',
+    title: 'The Return of the Lost Heiress',
+    genre: 'Heiress / Revenge / Romance',
+    tagline: 'A missing heiress comes back with a sharper edge, a hidden identity, and a score to settle with the people who stole her life.',
+    poster: thumbnail('Yl4oJ0B9f4Y'),
+    rating: 4.7,
+    videoUrl: 'https://www.youtube.com/watch?v=Yl4oJ0B9f4Y',
+  },
+  {
+    id: 'married-in-secret-loved-in-chaos',
+    title: 'Married in Secret, Loved in Chaos',
+    genre: 'Secret Marriage / Billionaire / Drama',
+    tagline: 'A hidden marriage, public scandal, and a dangerous power imbalance turn this romance into an all-night binge.',
+    poster: thumbnail('Qx8b2M9mGvY'),
+    rating: 4.7,
+    videoUrl: 'https://www.youtube.com/watch?v=Qx8b2M9mGvY',
+  },
 ]
 
 const featuredShow = importedShows.find((show) => show.featured) ?? importedShows[0]

@@ -130,7 +130,7 @@ button:disabled {
 }
 
 .status-banner {
-  width: min(1240px, calc(100% - 2rem));
+  width: min(1440px, calc(100% - 2rem));
   margin: 0.75rem auto 0;
   padding: 0.85rem 1rem;
   border-radius: 18px;
@@ -156,7 +156,7 @@ button:disabled {
 }
 
 .page-grid {
-  width: min(1240px, calc(100% - 2rem));
+  width: min(1440px, calc(100% - 2rem));
   margin: 0 auto;
   padding: 1rem 0 3rem;
   display: grid;
@@ -424,11 +424,18 @@ button:disabled {
 .show-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.15rem;
 }
 
 .show-grid--tall {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (min-width: 1320px) {
+  .show-grid,
+  .show-grid--tall {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 .show-card {
