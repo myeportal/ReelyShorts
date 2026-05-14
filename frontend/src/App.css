@@ -336,11 +336,14 @@ button:disabled {
 }
 
 .section-block--catalog {
-  padding: 1.15rem 0.75rem 1.35rem;
+  width: calc(100% + 1rem);
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  padding: 1.15rem 0.45rem 1.35rem;
 }
 
 .section-heading--catalog {
-  padding: 0 0.45rem 0.25rem;
+  padding: 0 0.55rem 0.25rem;
 }
 
 .mobile-preview {
