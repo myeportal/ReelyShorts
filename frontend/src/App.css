@@ -613,6 +613,41 @@ button:disabled {
   background: rgba(255, 255, 255, 0.04);
 }
 
+.social-links-card {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.social-button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  text-decoration: none;
+  color: #fff7ef;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(255, 91, 125, 0.18), rgba(255, 181, 79, 0.18));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.social-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 181, 79, 0.42);
+  background: linear-gradient(135deg, rgba(255, 91, 125, 0.3), rgba(255, 181, 79, 0.3));
+}
+
 .gated-card {
   display: grid;
   gap: 1rem;

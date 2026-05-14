@@ -557,10 +557,15 @@ function HomeScreen({ coinBalance, adCount, totalPublished, activeShow, shows, s
           <h3>Own the REELY SHORTS app before the first 100 licenses are gone.</h3>
           <p>Buy now while the early white label release is still open and secure a ready-to-brand short drama app built to help you launch faster. You’ll get the full app, setup instructions, and the option to upgrade into a turnkey setup path so you can move from idea to market without the usual delays.</p>
         </div>
-        <div className="carrier-list">
-          <h4>Reserve your copy now</h4>
-          <p>The Stripe payment button will be added here next.</p>
-          <div className="hero-actions"><button type="button">Payment link coming soon</button></div>
+        <div className="carrier-list social-links-card">
+          <h4>Follow the launch across social channels</h4>
+          <p>We can drop in each live page URL next. For now, this section is ready for Facebook, Instagram, X, and LinkedIn.</p>
+          <div className="social-button-grid">
+            <a href="#" className="social-button" aria-label="Facebook page link placeholder">Facebook</a>
+            <a href="#" className="social-button" aria-label="Instagram page link placeholder">Instagram</a>
+            <a href="#" className="social-button" aria-label="X page link placeholder">X</a>
+            <a href="#" className="social-button" aria-label="LinkedIn page link placeholder">LinkedIn</a>
+          </div>
         </div>
       </section>
     </main>
