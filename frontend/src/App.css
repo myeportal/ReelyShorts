@@ -130,7 +130,8 @@ button:disabled {
 }
 
 .status-banner {
-  width: min(1440px, calc(100% - 2rem));
+  width: calc(100vw - 2rem);
+  max-width: none;
   margin: 0.75rem auto 0;
   padding: 0.85rem 1rem;
   border-radius: 18px;
@@ -156,7 +157,8 @@ button:disabled {
 }
 
 .page-grid {
-  width: min(1440px, calc(100% - 2rem));
+  width: calc(100vw - 2rem);
+  max-width: none;
   margin: 0 auto;
   padding: 1rem 0 3rem;
   display: grid;
@@ -423,19 +425,12 @@ button:disabled {
 
 .show-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, calc((100% - 3.45rem) / 4)));
   gap: 1.15rem;
 }
 
 .show-grid--tall {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-@media (min-width: 1320px) {
-  .show-grid,
-  .show-grid--tall {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
+  grid-template-columns: repeat(4, minmax(0, calc((100% - 3.45rem) / 4)));
 }
 
 .show-card {
