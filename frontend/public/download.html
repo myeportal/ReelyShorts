@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Delivery | REELY SHORTS White Label</title>
+  <style>
+    :root {
+      --bg: #090c13;
+      --bg-2: #121725;
+      --text: #f7f8fc;
+      --muted: #bcc4d8;
+      --line: rgba(255,255,255,0.08);
+      --primary: #ff5b7d;
+      --primary-2: #ffb54f;
+      --secondary: #635bff;
+      --panel: rgba(18, 21, 32, 0.9);
+      --shadow: 0 24px 60px rgba(0,0,0,0.35);
+      --radius: 28px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      font-family: Inter, Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at top left, rgba(255, 91, 125, 0.18), transparent 24%),
+        radial-gradient(circle at top right, rgba(255, 181, 79, 0.16), transparent 20%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 45%, #0a0d15 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: min(920px, 100%);
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      box-shadow: var(--shadow);
+      padding: 34px;
+    }
+
+    .pill {
+      display: inline-flex;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(99, 91, 255, 0.14);
+      border: 1px solid rgba(99, 91, 255, 0.24);
+      color: #ecebff;
+      font-size: .82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.04;
+      margin-bottom: 14px;
+    }
+
+    p, li { color: var(--muted); }
+
+    .lead {
+      font-size: 1.04rem;
+      margin-bottom: 24px;
+      max-width: 760px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+      margin: 28px 0;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--panel);
+      padding: 24px;
+    }
+
+    .panel h2 {
+      font-size: 1.18rem;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 18px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      padding: 14px 22px;
+      font-weight: 800;
+      color: white;
+      text-decoration: none;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      box-shadow: 0 16px 34px rgba(255, 91, 125, 0.25);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+      box-shadow: none;
+    }
+
+    .note {
+      margin-top: 10px;
+      font-size: .95rem;
+    }
+
+    @media (max-width: 780px) {
+      .grid { grid-template-columns: 1fr; }
+      .card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="pill">Secure Delivery</div>
+    <h1>Your REELY SHORTS package is protected behind payment verification.</h1>
+    <p class="lead">This page unlocks the package only when a valid paid Stripe checkout session is present. Once the final ZIP is uploaded, this button will securely serve the white label app package from the protected server path instead of exposing it as a public direct file.</p>
+
+    <div class="grid">
+      <section class="panel">
+        <h2>Download your package</h2>
+        <p>Use the protected button below after a verified checkout. The final ZIP can be dropped into the protected product folder later without changing this page flow.</p>
+        <div class="actions">
+          <a class="btn" id="download-btn" href="#download-pending">Download your white label App w/Instruction on how to deploy</a>
+        </div>
+        <p class="note" id="download-note">Waiting for verified checkout session...</p>
+      </section>
+
+      <section class="panel">
+        <h2>Delivery notes</h2>
+        <ul>
+          <li>The button stays locked unless the buyer arrives from a paid Stripe success redirect.</li>
+          <li>The ZIP file can be uploaded later to <strong>frontend/product/reelyshorts-white-label.zip</strong>.</li>
+          <li>You can expand this page later with onboarding videos, deployment steps, or support links.</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-secondary" href="/">Back to REELY SHORTS</a>
+    </div>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search)
+    const sessionId = params.get('session_id')
+    const product = params.get('product') || 'white-label'
+    const downloadBtn = document.getElementById('download-btn')
+    const downloadNote = document.getElementById('download-note')
+
+    if (sessionId) {
+      downloadBtn.href = `/api/download-product?session_id=${encodeURIComponent(sessionId)}&product=${encodeURIComponent(product)}`
+      downloadNote.textContent = 'Verified checkout detected. Your secure download link is ready.'
+    } else {
+      downloadBtn.setAttribute('aria-disabled', 'true')
+      downloadBtn.style.opacity = '0.55'
+      downloadBtn.style.pointerEvents = 'none'
+      downloadNote.textContent = 'No verified checkout session found. Please return using the Stripe success redirect.'
+    }
+  </script>
+</body>
+</html>

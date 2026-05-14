@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/download-product.js": {
+      "includeFiles": "product/**"
+    }
+  },
+  "routes": [
+    {
+      "src": "/product/(.*)",
+      "status": 404
+    }
+  ]
+}
