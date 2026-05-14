@@ -561,10 +561,22 @@ function HomeScreen({ coinBalance, adCount, totalPublished, activeShow, shows, s
           <h4>Follow the launch across social channels</h4>
           <p>We can drop in each live page URL next. For now, this section is ready for Facebook, Instagram, X, and LinkedIn.</p>
           <div className="social-button-grid">
-            <a href="#" className="social-button" aria-label="Facebook page link placeholder">Facebook</a>
-            <a href="#" className="social-button" aria-label="Instagram page link placeholder">Instagram</a>
-            <a href="#" className="social-button" aria-label="X page link placeholder">X</a>
-            <a href="#" className="social-button" aria-label="LinkedIn page link placeholder">LinkedIn</a>
+            <a href="#" className="social-button social-button--facebook" aria-label="Facebook page link placeholder">
+              <span className="social-button__icon" aria-hidden="true">f</span>
+              <span>Facebook</span>
+            </a>
+            <a href="#" className="social-button social-button--instagram" aria-label="Instagram page link placeholder">
+              <span className="social-button__icon" aria-hidden="true">◉</span>
+              <span>Instagram</span>
+            </a>
+            <a href="#" className="social-button social-button--x" aria-label="X page link placeholder">
+              <span className="social-button__icon" aria-hidden="true">𝕏</span>
+              <span>X</span>
+            </a>
+            <a href="#" className="social-button social-button--linkedin" aria-label="LinkedIn page link placeholder">
+              <span className="social-button__icon" aria-hidden="true">in</span>
+              <span>LinkedIn</span>
+            </a>
           </div>
         </div>
       </section>
