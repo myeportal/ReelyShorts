@@ -3,6 +3,18 @@
   background: #0b0d13;
 }
 
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -157,7 +169,7 @@ button:disabled {
 }
 
 .page-grid {
-  width: calc(100vw - 2rem);
+  width: calc(100% - 1rem);
   max-width: none;
   margin: 0 auto;
   padding: 1rem 0 3rem;
@@ -323,6 +335,14 @@ button:disabled {
   padding: 1.4rem;
 }
 
+.section-block--catalog {
+  padding: 1.15rem 0.75rem 1.35rem;
+}
+
+.section-heading--catalog {
+  padding: 0 0.45rem 0.25rem;
+}
+
 .mobile-preview {
   grid-column: 2 / 3;
 }
@@ -425,12 +445,12 @@ button:disabled {
 
 .show-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, calc((100% - 3.45rem) / 4)));
-  gap: 1.15rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.95rem;
 }
 
 .show-grid--tall {
-  grid-template-columns: repeat(4, minmax(0, calc((100% - 3.45rem) / 4)));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .show-card {

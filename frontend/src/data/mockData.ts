@@ -110,18 +110,18 @@ const importedShows: ImportedShow[] = [
     title: 'The Return of the Lost Heiress',
     genre: 'Heiress / Revenge / Romance',
     tagline: 'A missing heiress comes back with a sharper edge, a hidden identity, and a score to settle with the people who stole her life.',
-    poster: thumbnail('Yl4oJ0B9f4Y'),
+    poster: thumbnail('6sFwVGMFA6I'),
     rating: 4.7,
-    videoUrl: 'https://www.youtube.com/watch?v=Yl4oJ0B9f4Y',
+    videoUrl: 'https://www.youtube.com/watch?v=6sFwVGMFA6I',
   },
   {
     id: 'married-in-secret-loved-in-chaos',
     title: 'Married in Secret, Loved in Chaos',
     genre: 'Secret Marriage / Billionaire / Drama',
     tagline: 'A hidden marriage, public scandal, and a dangerous power imbalance turn this romance into an all-night binge.',
-    poster: thumbnail('Qx8b2M9mGvY'),
+    poster: thumbnail('7y1K7e5ejsk'),
     rating: 4.7,
-    videoUrl: 'https://www.youtube.com/watch?v=Qx8b2M9mGvY',
+    videoUrl: 'https://www.youtube.com/watch?v=7y1K7e5ejsk',
   },
 ]
 

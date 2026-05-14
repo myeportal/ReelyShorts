@@ -512,8 +512,8 @@ function HomeScreen({ coinBalance, adCount, totalPublished, activeShow, shows, s
         <div className="chip-row">{genreChips.map((chip, index) => <button key={chip} className={`genre-chip ${index === 0 ? 'active' : ''}`}>{chip}</button>)}</div>
       </section>
 
-      <section className="section-block">
-        <div className="section-heading"><div><p className="eyebrow">Trending now</p><h3>Portrait-first discovery with that familiar short-drama rhythm</h3></div><span className="pill">Ads unlock episodes for guests</span></div>
+      <section className="section-block section-block--catalog">
+        <div className="section-heading section-heading--catalog"><div><p className="eyebrow">Trending now</p><h3>Portrait-first discovery with that familiar short-drama rhythm</h3></div><span className="pill">Ads unlock episodes for guests</span></div>
         <div className="show-grid show-grid--tall">
           {shows.map((show) => (
             <article className={`show-card show-card--tall ${show.id === activeShow.id ? 'selected' : ''}`} key={show.id}>
@@ -554,8 +554,10 @@ function HomeScreen({ coinBalance, adCount, totalPublished, activeShow, shows, s
       <section className="section-block cms-summary">
         <div>
           <p className="eyebrow">White label opportunity</p>
-          <h3>Own the REELY SHORTS app before the first 100 licenses are gone.</h3>
-          <p>Buy now while the early white label release is still open and secure a ready-to-brand short drama app built to help you launch faster. You’ll get the full app, setup instructions, and the option to upgrade into a turnkey setup path so you can move from idea to market without the usual delays.</p>
+          <h3>Own the REELY SHORTS app before the first 100 white label licenses disappear.</h3>
+          <p>Own the REELY SHORTS app before the first 100 white label licenses disappear and position yourself at the front of one of the fastest-growing entertainment categories online: vertical short drama streaming. This is your opportunity to secure a fully branded-ready short drama app system designed for entrepreneurs, creators, marketers, agencies, and digital publishers who want to enter the booming “Reel-style binge content” market without spending months or years building technology from scratch.</p>
+          <p>The early white label release is now open for a limited number of founding license holders, giving you access to a ready-to-brand streaming platform engineered specifically for addictive short-form drama experiences. Instead of trying to piece together developers, designers, backend systems, mobile frameworks, hosting, and monetization tools on your own, REELY SHORTS gives you a launch-ready foundation you can customize into your own entertainment brand.</p>
+          <p>This isn’t just a template or generic clone script. REELY SHORTS was built around the explosive demand for serialized vertical storytelling — the kind of rapid-consumption content audiences binge for hours across mobile devices. From romance and suspense to billionaire stories, revenge arcs, emotional cliffhangers, viral mini-series, and creator-driven episodic entertainment, the short drama niche is rapidly becoming one of the most profitable mobile content markets online. With REELY SHORTS, you can step into that momentum with a platform already structured to support modern viewer behavior.</p>
         </div>
         <div className="carrier-list social-links-card">
           <h4>Follow the launch across social channels</h4>
