@@ -635,9 +635,27 @@ button:disabled {
 
 .social-links-card {
   display: grid;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto auto 1fr;
   align-content: stretch;
   gap: 1rem;
+}
+
+.social-cta-row {
+  width: 100%;
+}
+
+.social-cta-row a {
+  width: 100%;
+}
+
+.stripe-button-placeholder {
+  background: linear-gradient(135deg, #7c4dff, #635bff);
+  border: 1px solid rgba(159, 132, 255, 0.55);
+  box-shadow: 0 12px 28px rgba(99, 91, 255, 0.28);
+}
+
+.stripe-button-placeholder:hover {
+  filter: brightness(1.05);
 }
 
 .social-button-grid {

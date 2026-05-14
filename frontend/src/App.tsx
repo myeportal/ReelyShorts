@@ -562,6 +562,9 @@ function HomeScreen({ coinBalance, adCount, totalPublished, activeShow, shows, s
         <div className="carrier-list social-links-card">
           <h4>Follow the launch across social channels</h4>
           <p>We can drop in each live page URL next. For now, this section is ready for Facebook, Instagram, X, and LinkedIn.</p>
+          <div className="hero-actions social-cta-row">
+            <a href="#" className="stripe-button-placeholder" aria-label="Stripe payment link placeholder">Buy White Label Access</a>
+          </div>
           <div className="social-button-grid">
             <a href="#" className="social-button social-button--facebook" aria-label="Facebook page link placeholder">
               <span className="social-button__icon" aria-hidden="true">f</span>
