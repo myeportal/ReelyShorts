@@ -18,7 +18,7 @@ import {
   updateCmsShow,
   updateCmsVideo,
 } from './data/reelyApi'
-import { adCarriers, starterAdminVideos, starterShows } from './data/mockData'
+import { starterAdminVideos, starterShows } from './data/mockData'
 import { signInAsGuest, signOutUser, subscribeToAuthChanges } from './lib/auth'
 import { isSupabaseConfigured, supabase } from './lib/supabase'
 import { captureError, trackEvent, trackScreenView } from './lib/telemetry'
@@ -552,8 +552,16 @@ function HomeScreen({ coinBalance, adCount, totalPublished, activeShow, shows, s
       </section>
 
       <section className="section-block cms-summary">
-        <div><p className="eyebrow">CMS + moderation plan</p><h3>Admin system supports YouTube, Vimeo, and direct uploads up to 1.3GB.</h3><p>In production, uploads should go through signed storage URLs and server-side moderation state. This V1 adds the content model, moderation workflow, and UI scaffolding so we can wire Supabase next without redesigning the app.</p></div>
-        <div className="carrier-list"><h4>Recommended ad carriers to talk to later</h4><ul>{adCarriers.map((carrier) => <li key={carrier}>{carrier}</li>)}</ul></div>
+        <div>
+          <p className="eyebrow">White label opportunity</p>
+          <h3>Own the REELY SHORTS app before the first 100 licenses are gone.</h3>
+          <p>Buy now while the early white label release is still open and secure a ready-to-brand short drama app built to help you launch faster. You’ll get the full app, setup instructions, and the option to upgrade into a turnkey setup path so you can move from idea to market without the usual delays.</p>
+        </div>
+        <div className="carrier-list">
+          <h4>Reserve your copy now</h4>
+          <p>The Stripe payment button will be added here next.</p>
+          <div className="hero-actions"><button type="button">Payment link coming soon</button></div>
+        </div>
       </section>
     </main>
   )
