@@ -426,12 +426,50 @@
       align-items: center;
       justify-content: space-between;
       box-shadow: var(--shadow);
+      transition: transform .22s ease, opacity .22s ease, border-radius .22s ease, width .22s ease;
+    }
+
+    .sticky-cta.is-docked {
+      width: min(var(--max), calc(100% - 32px));
+      border-radius: 24px 24px 0 0;
+      margin: 48px auto 0;
+      position: relative;
+      bottom: 0;
+    }
+
+    .sticky-cta-copy {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      flex: 1 1 auto;
     }
 
     .sticky-cta span {
       color: var(--muted);
       font-size: .95rem;
       padding-left: 8px;
+    }
+
+    .sticky-cta-close {
+      width: 40px;
+      height: 40px;
+      flex: 0 0 40px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      font-size: 1rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .sticky-cta-close:hover {
+      transform: translateY(-1px);
+      background: rgba(255,255,255,0.08);
     }
 
     .divider {
@@ -476,6 +514,13 @@
         border-radius: 24px;
         flex-direction: column;
         align-items: stretch;
+      }
+      .sticky-cta.is-docked {
+        width: calc(100% - 20px);
+        border-radius: 24px 24px 0 0;
+      }
+      .sticky-cta-copy {
+        width: 100%;
       }
       .sticky-cta a { width: 100%; }
       .sticky-cta span { padding-left: 0; }
@@ -800,8 +845,11 @@
     </section>
   </main>
 
-  <div class="sticky-cta">
-    <span>Promote the first 100-license REELY SHORTS white label release while the founding window is still open.</span>
+  <div class="sticky-cta" id="sticky-cta">
+    <div class="sticky-cta-copy">
+      <span>Promote the first 100-license REELY SHORTS white label release while the founding window is still open.</span>
+      <button class="sticky-cta-close" id="sticky-cta-close" type="button" aria-label="Close floating call to action">×</button>
+    </div>
     <a href="#launch">Request JV approval</a>
   </div>
 
@@ -810,5 +858,20 @@
       <p>REELY SHORTS JV splash page package for affiliate review and marketplace positioning.</p>
     </div>
   </footer>
+
+  <script>
+    const stickyCta = document.getElementById('sticky-cta');
+    const stickyCtaClose = document.getElementById('sticky-cta-close');
+
+    if (stickyCta && stickyCtaClose) {
+      stickyCtaClose.addEventListener('click', () => {
+        stickyCta.classList.add('is-docked');
+        stickyCtaClose.disabled = true;
+        stickyCtaClose.setAttribute('aria-hidden', 'true');
+        stickyCtaClose.style.opacity = '0';
+        stickyCtaClose.style.pointerEvents = 'none';
+      });
+    }
+  </script>
 </body>
 </html>
