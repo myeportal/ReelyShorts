@@ -1,0 +1,40 @@
+{
+  "repo": "ReelyShorts",
+  "title": "ReelyShorts",
+  "tag": "Short Drama App + White Label",
+  "accent": "#f43f5e",
+  "accent2": "#8b5cf6",
+  "hook": "An app-style short drama product with white-label and commercial angles, blending product UX with premium promo and checkout flows.",
+  "sections": [
+    [
+      "01",
+      "Core Offer",
+      "Frontend experience, white-label package positioning, JV materials, and premium conversion-oriented assets."
+    ],
+    [
+      "02",
+      "Problem Solved",
+      "Packages short-form serialized content into a productized platform and potential resale / white-label opportunity."
+    ],
+    [
+      "03",
+      "Key Assets",
+      "App frontend, checkout scaffolding, public thank-you/download pages, JV package, and style explorations."
+    ],
+    [
+      "04",
+      "Ideal Buyer",
+      "Founders, media entrepreneurs, creators, and businesses wanting a short-drama content vehicle or branded app experience."
+    ],
+    [
+      "05",
+      "Growth Path",
+      "Traffic -> demo/app experience -> white-label pitch -> checkout -> product delivery/onboarding."
+    ],
+    [
+      "06",
+      "Next Expansion",
+      "Finalize env vars, package asset ZIP, and stronger proof/demo loops for the white-label sale."
+    ]
+  ]
+}
